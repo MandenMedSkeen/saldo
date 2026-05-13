@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Global styling*/
+
+/*index.html styling*/
+
+/*budgetberegner.html styling*/
+
+/*raadgivning.html styling*/
+
+/*om.html styling*/
+
+/*kontakt.html styling*/
+
+/*Mobil-version*/
+@media (max-width: 600px) {
+  /*Global styling*/
+
+  /*index.html styling*/
+
+  /*budgetberegner.html styling*/
+
+  /*raadgivning.html styling*/
+
+  /*om.html styling*/
+
+  /*kontakt.html styling*/
+}
+/* Tablet-version */
+@media (min-width: 601px) and (max-width: 768px) {
+  /*Global styling*/
+
+  /*index.html styling*/
+
+  /*budgetberegner.html styling*/
+
+  /*raadgivning.html styling*/
+
+  /*om.html styling*/
+
+  /*kontakt.html styling*/
+}
