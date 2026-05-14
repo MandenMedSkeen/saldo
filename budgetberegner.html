@@ -4,9 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Budgetberegner</title>
+    <!-- Google Fonts: Manrope + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <main>
+      <section class="budget-hero">
+        <div class="budget-container">
+          <div class="budget-intro">
+            <p class="green-label">Budgetberegner</p>
+
+            <h1>Få hurtigt overblik over din måned</h1>
+
+            <p>
+              Indtast cirka-beløb for dine indtægter og udgifter her ved siden
+              af, og se hvor mange penge du har tilbage, når de vigtigste
+              udgifter er betalt.
+            </p>
+          </div>
+
+          <div class="budget-calculator">
+            <div class="budget-row">
+              <label for="income" class="label-with-tip">
+                Indkomst / SU
+                <span class="tooltip" tabindex="0">
+                  ?
+                  <span class="tooltip-text">
+                    Indkomst er de penge, du får ind hver måned, f.eks. SU, løn,
+                    boligstøtte eller hjælp hjemmefra.
+                  </span>
+                </span>
+              </label>
+              <input
+                type="number"
+                id="income"
+                placeholder="fx 6500"
+                step="100"
+              />
+            </div>
+
+            <div class="budget-row">
+              <label for="rent" class="label-with-tip">
+                Husleje
+                <span class="tooltip" tabindex="0">
+                  ?
+                  <span class="tooltip-text">
+                    Husleje er det beløb, du betaler for at bo, f.eks.
+                    lejlighed, kollegieværelse eller værelse.
+                  </span>
+                </span>
+              </label>
+              <input type="number" id="rent" placeholder="fx 3500" step="100" />
+            </div>
+
+            <div class="budget-row">
+              <label for="food" class="label-with-tip">
+                Mad
+                <span class="tooltip" tabindex="0">
+                  ?
+                  <span class="tooltip-text">
+                    Mad dækker dagligvarer, kantine, takeaway, kaffe, snacks og
+                    andre madudgifter.
+                  </span>
+                </span>
+              </label>
+              <input type="number" id="food" placeholder="fx 1500" step="100" />
+            </div>
+
+            <div class="budget-row">
+              <label for="transport" class="label-with-tip">
+                Transport
+                <span class="tooltip" tabindex="0">
+                  ?
+                  <span class="tooltip-text">
+                    Transport kan være bus, tog, metro, pendlerkort, benzin,
+                    cykeludstyr eller lignende.
+                  </span>
+                </span>
+              </label>
+              <input
+                type="number"
+                id="transport"
+                placeholder="fx 600"
+                step="100"
+              />
+            </div>
+
+            <div class="budget-row">
+              <label for="subscriptions" class="label-with-tip">
+                Abonnementer
+                <span class="tooltip" tabindex="0">
+                  ?
+                  <span class="tooltip-text">
+                    Abonnementer kan være streaming, fitness, telefon, musik,
+                    apps, software eller medlemskaber.
+                  </span>
+                </span>
+              </label>
+              <input
+                type="number"
+                id="subscriptions"
+                placeholder="fx 400"
+                step="100"
+              />
+            </div>
+
+            <div class="budget-row">
+              <label for="other" class="label-with-tip">
+                Diverse
+                <span class="tooltip" tabindex="0">
+                  ?
+                  <span class="tooltip-text">
+                    Diverse indebærer f.eks. tøj, gaver, fornøjelser, småkøb,
+                    opsparing og uforudsete udgifter.
+                  </span>
+                </span>
+              </label>
+              <input type="number" id="other" placeholder="fx 650" step="100" />
+            </div>
+
+            <button id="calculateBtn">Beregn budget</button>
+
+            <div class="budget-result neutral">
+              <div class="result-icon">✓</div>
+
+              <div>
+                <h2 id="resultText">Du har 0 kr tilbage</h2>
+                <p id="resultMessage">Udfyld felterne og tryk på beregn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
