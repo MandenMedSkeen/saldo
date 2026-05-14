@@ -1,3 +1,19 @@
+//Header / Nav//
+const burgerButton = document.querySelector("#burgerButton");
+const navLinks = document.querySelector("#navLinks");
+
+if (burgerButton && navLinks) {
+  burgerButton.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+
+    if (navLinks.classList.contains("active")) {
+      burgerButton.textContent = "×";
+    } else {
+      burgerButton.textContent = "☰";
+    }
+  });
+}
+
 //index.html//
 
 //budgetberegner.html//

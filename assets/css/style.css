@@ -19,15 +19,165 @@ h6,
   font-family: "Manrope", sans-serif;
 }
 
+/*_______________________________________   Header / Nav styling   ____________________________________________*/
+.site-header {
+  background-color: #145a32;
+  padding: 0 40px;
+}
+
+.navbar {
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 72px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #f6f6f6;
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.logo-box {
+  width: 46px;
+  height: 46px;
+  background-color: #f6f6f6;
+  color: #145a32;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #f6f6f6;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #2ecc71;
+}
+
+.burger-button {
+  display: none;
+}
+
+/*_______________________________________   Footer styling   ____________________________________________*/
+.site-footer {
+  background-color: #145a32;
+  color: #f6f6f6;
+  padding: 50px 40px 25px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 70px;
+}
+
+.footer-brand p {
+  max-width: 340px;
+  margin-top: 18px;
+  line-height: 1.6;
+  font-size: 15px;
+  color: rgba(246, 246, 246, 0.8);
+}
+
+.footer-logo {
+  width: 70px;
+  height: 70px;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: rgba(246, 246, 246, 0.8);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-links a:hover {
+  color: #2ecc71;
+}
+
+.footer-contact p {
+  color: rgba(246, 246, 246, 0.8);
+  font-size: 15px;
+}
+
+.footer-bottom {
+  max-width: 1300px;
+  margin: 35px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(246, 246, 246, 0.25);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: rgba(246, 246, 246, 0.75);
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons span {
+  width: 28px;
+  height: 28px;
+  background-color: #f6f6f6;
+  display: block;
+}
+
 /*_______________________________________   index.html styling   ____________________________________________*/
 
 /*_______________________________________   budgetberegner.html styling   ____________________________________________*/
 .budget-hero {
-  padding: 40px;
+  padding: 50px 40px;
 }
 
 .budget-container {
-  background-color: #1d7a45;
+  background-color: #145a32;
   border-radius: 24px;
   padding: 60px;
   max-width: 1300px;
@@ -164,7 +314,7 @@ h6,
 #calculateBtn {
   width: 100%;
   padding: 20px;
-  background-color: #1d7a45;
+  background-color: #145a32;
   color: #f6f6f6;
   border: none;
   border-radius: 12px;
@@ -270,11 +420,87 @@ h6,
 @media (max-width: 600px) {
   /*Global styling*/
 
+  /*Header / Nav styling*/
+  .site-header {
+    padding: 0 20px;
+  }
+
+  .navbar {
+    height: auto;
+    min-height: 70px;
+    padding: 14px 0;
+    flex-wrap: wrap;
+  }
+
+  .nav-logo {
+    font-size: 22px;
+  }
+
+  .logo-box {
+    width: 42px;
+    height: 42px;
+  }
+
+  .burger-button {
+    display: block;
+    background: none;
+    border: none;
+    color: #f6f6f6;
+    font-size: 34px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 14px;
+    background-color: #145a32;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 16px 18px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(246, 246, 246, 0.15);
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  /*Footer styling*/
+  .site-footer {
+    padding: 40px 20px 24px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
   /*index.html styling*/
 
   /*budgetberegner.html styling*/
   .budget-hero {
-    padding: 20px;
+    padding: 30px 20px;
   }
 
   .budget-container {
@@ -338,11 +564,68 @@ h6,
 @media (min-width: 601px) and (max-width: 768px) {
   /*Global styling*/
 
+  /*Header / Nav styling*/
+  .site-header {
+    padding: 0 25px;
+  }
+
+  .navbar {
+    height: auto;
+    min-height: 76px;
+    padding: 16px 0;
+    flex-wrap: wrap;
+  }
+
+  .burger-button {
+    display: block;
+    background: none;
+    border: none;
+    color: #f6f6f6;
+    font-size: 34px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 16px;
+    background-color: #145a32;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 16px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(246, 246, 246, 0.15);
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  /*Footer styling*/
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
   /*index.html styling*/
 
   /*budgetberegner.html styling*/
   .budget-hero {
-    padding: 30px;
+    padding: 30px 20px;
   }
 
   .budget-container {
