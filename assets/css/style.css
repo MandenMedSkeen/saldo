@@ -666,6 +666,7 @@ a {
 .fact-graphic {
   overflow: hidden;
   border-radius: 12px;
+  border: solid 1px #151515;
   max-width: 500px;
 }
 
@@ -823,6 +824,14 @@ a {
     gap: 35px;
   }
 
+  .lesson-content.reverse .video-box {
+    order: -1;
+  }
+
+  .lesson-content.reverse .lesson-text {
+    order: 1;
+  }
+
   .video-box {
     min-height: 280px;
   }
@@ -850,6 +859,14 @@ a {
 
   .fact-graphic video {
     border-radius: 12px;
+  }
+
+  .fact-section .fact-text {
+    order: 1;
+  }
+
+  .fact-section .fact-graphic {
+    order: 2;
   }
 
   .fact-text {
@@ -996,11 +1013,27 @@ a {
     gap: 35px;
   }
 
+  .lesson-content.reverse .video-box {
+    order: -1;
+  }
+
+  .lesson-content.reverse .lesson-text {
+    order: 1;
+  }
+
   .fact-section,
   .fact-section.reverse {
     grid-template-columns: 1fr;
     padding: 0 20px;
     gap: 35px;
+  }
+
+  .fact-section .fact-text {
+    order: 1;
+  }
+
+  .fact-section .fact-graphic {
+    order: 2;
   }
 
   p.lesson-label {
@@ -1223,6 +1256,14 @@ a {
     gap: 28px;
   }
 
+  .lesson-content.reverse .video-box {
+    order: -1;
+  }
+
+  .lesson-content.reverse .lesson-text {
+    order: 1;
+  }
+
   .video-box {
     min-height: 220px;
   }
@@ -1266,12 +1307,25 @@ a {
   }
 
   .fact-graphic {
-    border-radius: 12px;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
   }
 
-  .fact-graphic video {
-    border-radius: 12px;
+  .fact-graphic video,
+  .fact-graphic img {
+    margin: 0 auto;
+  }
+
+  .fact-section .fact-text {
+    order: 1;
+  }
+
+  .fact-section .fact-graphic {
+    order: 2;
   }
 
   .fact-text h2 {
