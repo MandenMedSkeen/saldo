@@ -1,16 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rådgivning</title>
+    <!-- Google Fonts: Manrope + Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="navbar">
         <a href="index.html" class="nav-logo">
-          <div class="logo-box">Logo</div>
+          <div class="logo-box">
+            <img src="assets/images/logo/logo-saldo.png" alt="Saldo logo" />
+          </div>
           <span>Saldo</span>
         </a>
 
@@ -21,17 +30,458 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Hjem</a></li>
           <li><a href="budgetberegner.html">Budgetberegner</a></li>
-          <li><a href="raadgivning.html">Rådgivning</a></li>
+          <li><a href="raadgivning.html" class="active-link">Rådgivning</a></li>
           <li><a href="om.html">Om os</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="advice-page">
+        <!-- Lektion 1 -->
+        <section class="lesson-card">
+          <div class="lesson-header">
+            <p class="lesson-label">Lektion 1</p>
+            <h1>Småkøb: De penge du ikke opdager</h1>
+            <p>
+              Kaffe, snacks og impulskøb føles små. Men over tid kan de løbe op
+              i store beløb. I denne lektion lærer du, hvordan du får øje på dem
+              og tager kontrollen tilbage.
+            </p>
+          </div>
+
+          <div class="lesson-content">
+            <div class="video-box">
+              <span class="video-label">▶ Video</span>
+              <div class="play-button">▶</div>
+            </div>
+
+            <div class="lesson-text">
+              <p>
+                Småkøb er lette at gøre, og nemme at glemme. Men de påvirker dit
+                budget hver eneste dag. I denne lektion får du indsigt og
+                konkrete tips til at spare uden at give afkald på det, du holder
+                af.
+              </p>
+
+              <ul>
+                <li>Hvorfor småkøb er svære at opdage</li>
+                <li>Typiske fælder i hverdagen</li>
+                <li>3 nemme måder at spare på</li>
+              </ul>
+
+              <button class="quiz-toggle" data-quiz="quiz1">
+                Tag mini-quiz
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-box" id="quiz1">
+            <h2>Mini-quiz: Småkøb</h2>
+
+            <div class="quiz-question" data-answer="b">
+              <p>1. Hvorfor er småkøb ofte svære at opdage?</p>
+              <label
+                ><input type="radio" name="q1-1" value="a" /> Fordi de altid er
+                gratis</label
+              >
+              <label
+                ><input type="radio" name="q1-1" value="b" /> Fordi hvert køb
+                virker lille i øjeblikket</label
+              >
+              <label
+                ><input type="radio" name="q1-1" value="c" /> Fordi banken
+                skjuler dem</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="c">
+              <p>2. Hvilket køb er et typisk småkøb?</p>
+              <label
+                ><input type="radio" name="q1-2" value="a" /> Husleje</label
+              >
+              <label
+                ><input type="radio" name="q1-2" value="b" /> Elregning</label
+              >
+              <label
+                ><input type="radio" name="q1-2" value="c" /> Kaffe på
+                farten</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="a">
+              <p>3. Hvad kan hjælpe dig med at få overblik over småkøb?</p>
+              <label
+                ><input type="radio" name="q1-3" value="a" /> Tjekke dine køb én
+                gang om ugen</label
+              >
+              <label
+                ><input type="radio" name="q1-3" value="b" /> Aldrig kigge på
+                din konto</label
+              >
+              <label
+                ><input type="radio" name="q1-3" value="c" /> Købe mere med
+                kontanter</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="b">
+              <p>4. Hvad er en god strategi mod impulskøb?</p>
+              <label
+                ><input type="radio" name="q1-4" value="a" /> Køb med det
+                samme</label
+              >
+              <label
+                ><input type="radio" name="q1-4" value="b" /> Vent lidt og
+                overvej om du har brug for det</label
+              >
+              <label
+                ><input type="radio" name="q1-4" value="c" /> Slet din
+                bankapp</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="c">
+              <p>5. Hvad er hovedpointen med småkøb?</p>
+              <label
+                ><input type="radio" name="q1-5" value="a" /> De betyder aldrig
+                noget</label
+              >
+              <label
+                ><input type="radio" name="q1-5" value="b" /> De er kun farlige
+                om fredagen</label
+              >
+              <label
+                ><input type="radio" name="q1-5" value="c" /> De kan blive dyre,
+                når de gentages ofte</label
+              >
+            </div>
+
+            <button class="quiz-submit">Se resultat</button>
+            <p class="quiz-result"></p>
+          </div>
+        </section>
+
+        <!-- Grafboks 1 -->
+        <section class="fact-section">
+          <div class="fact-graphic">
+            <video
+              src="assets/videos/graf-kaffe.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+
+          <div class="fact-text">
+            <p class="lesson-label">Vidste du at...</p>
+            <h2>Små beløb hurtigt kan blive store</h2>
+            <p>
+              En kaffe til 35 kr. virker måske ikke som meget. Men hvis du køber
+              den fire gange om ugen, bliver det til over 500 kr. om måneden.
+            </p>
+          </div>
+        </section>
+
+        <!-- Lektion 2 -->
+        <section class="lesson-card">
+          <div class="lesson-header">
+            <p class="lesson-label">Lektion 2</p>
+            <h1>Mad: Takeaway vs. hjemmelavet</h1>
+            <p>
+              Takeaway er nemt, men det kan hurtigt blive en dyr vane. I denne
+              lektion ser du, hvordan små ændringer i dine madvaner kan gøre en
+              kæmpe forskel for dit budget.
+            </p>
+          </div>
+
+          <div class="lesson-content reverse">
+            <div class="lesson-text">
+              <p>
+                Takeaway føles ofte nemt og bekvemt, men det koster mere, end
+                man lige tror, især over tid. I denne lektion får du enkle tips
+                til, hvordan du kan spise godt i hverdagen og stadig holde
+                budgettet i balance.
+              </p>
+
+              <ul>
+                <li>Hvad takeaway egentlig koster</li>
+                <li>Billige måltider du nemt kan lave</li>
+                <li>Sådan planlægger du smartere indkøb</li>
+              </ul>
+
+              <button class="quiz-toggle" data-quiz="quiz2">
+                Tag mini-quiz
+              </button>
+            </div>
+
+            <div class="video-box">
+              <span class="video-label">▶ Video</span>
+              <div class="play-button">▶</div>
+            </div>
+          </div>
+
+          <div class="quiz-box" id="quiz2">
+            <h2>Mini-quiz: Madbudget</h2>
+
+            <div class="quiz-question" data-answer="b">
+              <p>1. Hvorfor kan takeaway blive en budgetfælde?</p>
+              <label
+                ><input type="radio" name="q2-1" value="a" /> Fordi det altid er
+                sundt</label
+              >
+              <label
+                ><input type="radio" name="q2-1" value="b" /> Fordi det hurtigt
+                bliver dyrt, hvis det gentages ofte</label
+              >
+              <label
+                ><input type="radio" name="q2-1" value="c" /> Fordi det aldrig
+                smager godt</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="a">
+              <p>2. Hvad er en god måde at spare på mad?</p>
+              <label
+                ><input type="radio" name="q2-2" value="a" /> Lave mad til flere
+                dage</label
+              >
+              <label
+                ><input type="radio" name="q2-2" value="b" /> Købe takeaway hver
+                dag</label
+              >
+              <label
+                ><input type="radio" name="q2-2" value="c" /> Springe måltider
+                over</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="c">
+              <p>3. Hvad betyder madplanlægning?</p>
+              <label
+                ><input type="radio" name="q2-3" value="a" /> At købe tilfældige
+                varer</label
+              >
+              <label
+                ><input type="radio" name="q2-3" value="b" /> At spise det samme
+                altid</label
+              >
+              <label
+                ><input type="radio" name="q2-3" value="c" /> At planlægge
+                måltider og indkøb på forhånd</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="b">
+              <p>4. Hvad kan være en god “nødret”?</p>
+              <label
+                ><input type="radio" name="q2-4" value="a" /> En dyr
+                burger-menu</label
+              >
+              <label
+                ><input type="radio" name="q2-4" value="b" /> En billig og nem
+                ret du kan lave hurtigt</label
+              >
+              <label
+                ><input type="radio" name="q2-4" value="c" /> Ingenting</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="a">
+              <p>5. Hvad er pointen med lektionen?</p>
+              <label
+                ><input type="radio" name="q2-5" value="a" /> Du skal ikke
+                droppe takeaway, men forstå hvad det koster</label
+              >
+              <label
+                ><input type="radio" name="q2-5" value="b" /> Du må aldrig spise
+                ude</label
+              >
+              <label
+                ><input type="radio" name="q2-5" value="c" /> Madbudget er
+                ligegyldigt</label
+              >
+            </div>
+
+            <button class="quiz-submit">Se resultat</button>
+            <p class="quiz-result"></p>
+          </div>
+        </section>
+
+        <!-- Grafboks 2 -->
+        <section class="fact-section reverse">
+          <div class="fact-text">
+            <p class="lesson-label">Vidste du at...</p>
+            <h2>Takeaway én gang om ugen kan mærkes</h2>
+            <p>
+              Hvis en takeaway koster 120 kr., bliver det næsten 500 kr. om
+              måneden, selv hvis du kun bestiller én gang om ugen.
+            </p>
+          </div>
+
+          <div class="fact-graphic">
+            <p>Graf</p>
+          </div>
+        </section>
+
+        <!-- Lektion 3 -->
+        <section class="lesson-card">
+          <div class="lesson-header">
+            <p class="lesson-label">Lektion 3</p>
+            <h1>Del dine penge op</h1>
+            <p>
+              Når alle dine penge står på samme konto, kan det være svært at
+              holde overblik. I denne lektion lærer du, hvordan du fordeler dine
+              penge og gør dit budget mere overskueligt.
+            </p>
+          </div>
+
+          <div class="lesson-content">
+            <div class="video-box">
+              <span class="video-label">▶ Video</span>
+              <div class="play-button">▶</div>
+            </div>
+
+            <div class="lesson-text">
+              <p>
+                Ved at dele dine penge op i faste udgifter, forbrug og opsparing
+                bliver det lettere at se, hvad du faktisk har råd til. Det giver
+                mere ro og gør det nemmere at holde styr på din økonomi.
+              </p>
+
+              <ul>
+                <li>Hvorfor det hjælper at dele dine penge op</li>
+                <li>Sådan fordeler du dit budget</li>
+                <li>En nem metode til mere overblik</li>
+              </ul>
+
+              <button class="quiz-toggle" data-quiz="quiz3">
+                Tag mini-quiz
+              </button>
+            </div>
+          </div>
+
+          <div class="quiz-box" id="quiz3">
+            <h2>Mini-quiz: Del dine penge op</h2>
+
+            <div class="quiz-question" data-answer="b">
+              <p>
+                1. Hvorfor kan det være svært at have alle penge på én konto?
+              </p>
+              <label
+                ><input type="radio" name="q3-1" value="a" /> Fordi pengene
+                forsvinder fysisk</label
+              >
+              <label
+                ><input type="radio" name="q3-1" value="b" /> Fordi det er svært
+                at se, hvad pengene skal bruges til</label
+              >
+              <label
+                ><input type="radio" name="q3-1" value="c" /> Fordi banken
+                lukker kontoen</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="a">
+              <p>2. Hvad kan man dele pengene op i?</p>
+              <label
+                ><input type="radio" name="q3-2" value="a" /> Faste udgifter,
+                forbrug og opsparing</label
+              >
+              <label
+                ><input type="radio" name="q3-2" value="b" /> Kun
+                cafépenge</label
+              >
+              <label
+                ><input type="radio" name="q3-2" value="c" /> Tilfældige
+                køb</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="c">
+              <p>3. Hvad bør man betale først?</p>
+              <label><input type="radio" name="q3-3" value="a" /> Snacks</label>
+              <label><input type="radio" name="q3-3" value="b" /> Tøj</label>
+              <label
+                ><input type="radio" name="q3-3" value="c" /> Faste
+                udgifter</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="a">
+              <p>4. Hvad gør opsparing lettere?</p>
+              <label
+                ><input type="radio" name="q3-4" value="a" /> At sætte penge til
+                side med det samme</label
+              >
+              <label
+                ><input type="radio" name="q3-4" value="b" /> At vente til
+                måneden er slut</label
+              >
+              <label
+                ><input type="radio" name="q3-4" value="c" /> At bruge alt
+                først</label
+              >
+            </div>
+
+            <div class="quiz-question" data-answer="b">
+              <p>5. Hvad er målet med at dele pengene op?</p>
+              <label
+                ><input type="radio" name="q3-5" value="a" /> At gøre økonomi
+                mere forvirrende</label
+              >
+              <label
+                ><input type="radio" name="q3-5" value="b" /> At få mere ro og
+                overblik</label
+              >
+              <label
+                ><input type="radio" name="q3-5" value="c" /> At bruge flere
+                penge</label
+              >
+            </div>
+
+            <button class="quiz-submit">Se resultat</button>
+            <p class="quiz-result"></p>
+          </div>
+        </section>
+
+        <!-- Grafboks 3 -->
+        <section class="fact-section">
+          <div class="fact-graphic">
+            <p>Graf</p>
+          </div>
+
+          <div class="fact-text">
+            <p class="lesson-label">Vidste du at...</p>
+            <h2>Overblik giver mere ro</h2>
+            <p>
+              Når du opdeler dine penge, kan du hurtigere se, hvad der er til
+              faste udgifter, hvad du kan bruge, og hvad du kan gemme.
+            </p>
+          </div>
+        </section>
+
+        <!-- CTA i stedet for SoMe-footer -->
+        <section class="advice-cta">
+          <div>
+            <h2>Klar til at teste dit eget budget?</h2>
+            <p>
+              Brug det du har lært, og prøv budgetberegneren for at se, om du er
+              blevet bedre til at budgetere!
+            </p>
+          </div>
+
+          <a href="budgetberegner.html">Prøv budgetberegneren</a>
+        </section>
+      </section>
+    </main>
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-brand">
-          <div class="logo-box footer-logo">Logo</div>
+          <div class="logo-box footer-logo">
+            <img src="assets/images/logo/logo-saldo.png" alt="Saldo logo" />
+          </div>
           <p>Vend mønten til en bedre fremtid.</p>
         </div>
 

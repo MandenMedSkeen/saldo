@@ -65,7 +65,59 @@ if (calculateBtn) {
     }
   });
 }
+
 //raadgivning.html//
+const quizButtons = document.querySelectorAll(".quiz-toggle");
+
+quizButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const quizId = button.dataset.quiz;
+    const quizBox = document.querySelector("#" + quizId);
+
+    quizBox.classList.toggle("active");
+
+    if (quizBox.classList.contains("active")) {
+      button.textContent = "Luk mini-quiz";
+    } else {
+      button.textContent = "Tag mini-quiz";
+    }
+  });
+});
+
+const quizSubmitButtons = document.querySelectorAll(".quiz-submit");
+
+quizSubmitButtons.forEach(function (submitButton) {
+  submitButton.addEventListener("click", function () {
+    const quizBox = submitButton.parentElement;
+    const questions = quizBox.querySelectorAll(".quiz-question");
+    const result = quizBox.querySelector(".quiz-result");
+
+    let score = 0;
+
+    questions.forEach(function (question) {
+      const correctAnswer = question.dataset.answer;
+      const selectedAnswer = question.querySelector("input:checked");
+
+      if (selectedAnswer && selectedAnswer.value === correctAnswer) {
+        score++;
+      }
+    });
+
+    result.textContent =
+      "Du fik " + score + " ud af " + questions.length + " rigtige.";
+
+    if (score === questions.length) {
+      result.textContent +=
+        " Sådan! Du har styr på alt, hvad denne lektion kan byde på.";
+    } else if (score >= 3) {
+      result.textContent +=
+        " Flot resultat! Du har fanget det vigtigste i denne lektion.";
+    } else {
+      result.textContent +=
+        " Prøv at se lektionen igen og tag quizzen bagefter.";
+    }
+  });
+});
 
 //om.html//
 
