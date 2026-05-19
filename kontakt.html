@@ -23,9 +23,7 @@
           <span>Saldo</span>
         </a>
 
-        <button class="burger-button" id="burgerButton" aria-label="Åbn menu">
-          ☰
-        </button>
+        <button class="burger-button" id="burgerButton" aria-label="Åbn menu">☰</button>
 
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Hjem</a></li>
@@ -36,7 +34,33 @@
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="contact-container">
+        <div class="contact-text">
+          <h3>KONTAKT OS</h3>
+          <h1>Brug for hjælp?</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, quis?</p>
+        </div>
+        <section class="form-container">
+          <div class="contact-form">
+            <form id="form">
+              <input type="text" placeholder="Navn" name="name" required />
+              <input type="email" placeholder="Email" name="email" required />
+              <input type="text" placeholder="Emne" name="title" required />
+              <textarea placeholder="Besked" name="message" required></textarea>
+              <input id="btnSend" type="submit" value="Send" />
+            </form>
+          </div>
+          <div class="contact-overlay">
+            <div class="overlay-content">
+              <h2>Tak for din besked!</h2>
+              <p>Din mail er nu sendt, og vi vender tilbage hurtigst muligt.</p>
+              <button id="closeOverlay">Luk</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-brand">
@@ -73,6 +97,8 @@
         </div>
       </div>
     </footer>
+    <!-- Script til kontaktformular. -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

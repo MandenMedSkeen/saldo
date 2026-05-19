@@ -26,9 +26,7 @@ if (calculateBtn) {
     const rent = Number(document.querySelector("#rent").value);
     const food = Number(document.querySelector("#food").value);
     const transport = Number(document.querySelector("#transport").value);
-    const subscriptions = Number(
-      document.querySelector("#subscriptions").value,
-    );
+    const subscriptions = Number(document.querySelector("#subscriptions").value);
     const other = Number(document.querySelector("#other").value);
 
     const expenses = rent + food + transport + subscriptions + other;
@@ -50,18 +48,15 @@ if (calculateBtn) {
     if (leftover < 0) {
       resultBox.classList.add("negative");
       resultIcon.textContent = "!";
-      resultMessage.textContent =
-        "Pas på! Dine udgifter er højere end din indkomst.";
+      resultMessage.textContent = "Pas på! Dine udgifter er højere end din indkomst.";
     } else if (leftover <= 1000) {
       resultBox.classList.add("neutral");
       resultIcon.textContent = "✓";
-      resultMessage.textContent =
-        "Du holder dig inden for budgettet, men der er ikke meget luft.";
+      resultMessage.textContent = "Du holder dig inden for budgettet, men der er ikke meget luft.";
     } else {
       resultBox.classList.add("positive");
       resultIcon.textContent = "✓";
-      resultMessage.textContent =
-        "Stærkt! Du har god luft i budgettet denne måned.";
+      resultMessage.textContent = "Stærkt! Du har god luft i budgettet denne måned.";
     }
   });
 }
@@ -103,18 +98,14 @@ quizSubmitButtons.forEach(function (submitButton) {
       }
     });
 
-    result.textContent =
-      "Du fik " + score + " ud af " + questions.length + " rigtige.";
+    result.textContent = "Du fik " + score + " ud af " + questions.length + " rigtige.";
 
     if (score === questions.length) {
-      result.textContent +=
-        " Sådan! Du har styr på alt, hvad denne lektion kan byde på.";
+      result.textContent += " Sådan! Du har styr på alt, hvad denne lektion kan byde på.";
     } else if (score >= 3) {
-      result.textContent +=
-        " Flot resultat! Du har fanget det vigtigste i denne lektion.";
+      result.textContent += " Flot resultat! Du har fanget det vigtigste i denne lektion.";
     } else {
-      result.textContent +=
-        " Prøv at se lektionen igen og tag quizzen bagefter.";
+      result.textContent += " Prøv at se lektionen igen og tag quizzen bagefter.";
     }
   });
 });
@@ -122,3 +113,43 @@ quizSubmitButtons.forEach(function (submitButton) {
 //om.html//
 
 //kontakt.html//
+
+// KONTAKTFORM
+
+(function () {
+  emailjs.init("sfstn9MsoiG6ZhNp-");
+})();
+
+window.onload = function () {
+  document.getElementById("form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    emailjs.sendForm("service_1pfc1cz", "template_pd9ehyk", this).then(
+      () => {
+        console.log("SUCCESS!");
+      },
+      (error) => {
+        console.log("FAILED...", error);
+      },
+    );
+  });
+};
+
+// OVERLAY TIL KONTAKTFORM
+
+// Åbner overlay, når der trykkes "Send" OG felterne er udfyldt.
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  document.querySelector(".contact-overlay").classList.add("show");
+});
+
+// Lukker overlay ved at trykke på knappen "Luk".
+document.querySelector("#closeOverlay").addEventListener("click", function () {
+  document.querySelector(".contact-overlay").classList.remove("show");
+});
+
+// Lukker overlay, hvis man klikker hvor som helst udenfor boksen.
+document.querySelector(".contact-overlay").addEventListener("click", function (event) {
+  if (event.target === document.querySelector(".contact-overlay")) {
+    document.querySelector(".contact-overlay").classList.remove("show");
+  }
+});
