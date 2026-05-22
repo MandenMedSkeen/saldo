@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -30,27 +34,131 @@
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html" class="active-link">Hjem</a></li>
           <li><a href="budgetberegner.html">Budgetberegner</a></li>
-          <li><a href="raadgivning.html">Rådgivning</a></li>
+          <li><a href="raadgivning.html">Quiz & Læring</a></li>
           <li><a href="om.html">Om os</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section class="hero-container">
+        <div class="hero-text">
+          <p class="section-label">SALDO</p>
+          <h1>Velkommen!</h1>
+          <p>
+            Velkommen til Saldo - et sted skabt for unge studerende, der ønsker
+            bedre styr på deres økonomi.
+          </p>
+          <button id="hero-btn">
+            <a href="om.html">Læs mere om os</a>
+          </button>
+        </div>
+        <div class="hero-img-container">
+          <img
+            src="assets/images/photos/hero.jpg"
+            class="hero-img"
+            alt="Billede af Saldo hero"
+          />
+        </div>
+      </section>
+      <!-- Card til budgetberegner -->
+      <section class="cards-container">
+        <a href="budgetberegner.html" class="cards">
+          <div class="card-img-container">
+            <img
+              src="assets/images/photos/budget.jpg"
+              class="card-img"
+              alt="Billede af person der regner budget på computer"
+            />
+          </div>
+          <div class="card-text">
+            <h3>Budgetberegner</h3>
+            <p>
+              Har du styr på dit budget? Test dig selv med vores budgetberegner.
+            </p>
+          </div>
+        </a>
+        <!-- Card til rådgivning -->
+        <a href="raadgivning.html" class="cards">
+          <div class="card-img-container">
+            <img
+              src="assets/images/photos/advice.jpg"
+              class="card-img"
+              alt="Billede af folk der snakker om budget"
+            />
+          </div>
+          <div class="card-text">
+            <h3>Quiz & Læring</h3>
+            <p>
+              Se korte videoer om økonomi, og test din viden med mini-quizzer
+              efter hver lektion.
+            </p>
+          </div>
+        </a>
+        <!-- Card til om os -->
+        <a href="om.html" class="cards">
+          <div class="card-img-container">
+            <img
+              src="assets/images/photos/about.jpg"
+              class="card-img"
+              alt="Billede af kontor setting"
+            />
+          </div>
+          <div class="card-text">
+            <h3>Om os</h3>
+            <p>
+              Læs mere om Saldo, vores mission og hvordan vi hjælper unge med at
+              få bedre styr på deres økonomi.
+            </p>
+          </div>
+        </a>
+        <!-- Card til kontakt -->
+        <a href="kontakt.html" class="cards">
+          <div class="card-img-container">
+            <img
+              src="assets/images/photos/contact.jpg"
+              class="card-img"
+              alt="Billede af support"
+            />
+          </div>
+          <div class="card-text">
+            <h3>Kontakt os</h3>
+            <p>
+              Har du spørgsmål eller brug for hjælp? Kontakt os, så hjælper vi
+              dig videre på en tryg og overskuelig måde.
+            </p>
+          </div>
+        </a>
+      </section>
+      <section class="so-me-banner">
+        <a href="some.html">
+          <i class="fa-brands fa-facebook-f"> </i>
+        </a>
+        <a href="some.html">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="some.html">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="some.html">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </section>
+    </main>
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-brand">
           <div class="logo-box footer-logo">
             <img src="assets/images/logo/logo-saldo.png" alt="Saldo logo" />
           </div>
-          <p>Vend mønten til en bedre fremtid.</p>
+          <p>Saldo - Fremtid, Frihed, Overskud</p>
         </div>
 
         <div class="footer-links">
           <h3>Menu</h3>
           <a href="index.html">Hjem</a>
           <a href="budgetberegner.html">Budgetberegner</a>
-          <a href="raadgivning.html">Rådgivning</a>
+          <a href="raadgivning.html">Quiz & Læring</a>
           <a href="om.html">Om os</a>
           <a href="kontakt.html">Kontakt</a>
         </div>
@@ -67,9 +175,21 @@
         <p>© 2026 Saldo</p>
 
         <div class="social-icons">
-          <span></span>
-          <span></span>
-          <span></span>
+          <a href="some.html" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+          <a href="some.html" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="some.html" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+          <a href="some.html" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
         </div>
       </div>
     </footer>

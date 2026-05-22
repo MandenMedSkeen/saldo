@@ -122,3 +122,51 @@ quizSubmitButtons.forEach(function (submitButton) {
 //om.html//
 
 //kontakt.html//
+const contactForm = document.querySelector("#form");
+const contactOverlay = document.querySelector(".contact-overlay");
+const closeOverlay = document.querySelector("#closeOverlay");
+
+if (contactForm) {
+  if (typeof emailjs !== "undefined") {
+    emailjs.init("sfstn9MsoiG6ZhNp-");
+  }
+
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    function showContactOverlay() {
+      if (contactOverlay) {
+        contactOverlay.classList.add("show");
+      }
+    }
+
+    if (typeof emailjs !== "undefined") {
+      emailjs.sendForm("service_1pfc1cz", "template_pd9ehyk", contactForm).then(
+        function () {
+          showContactOverlay();
+          contactForm.reset();
+        },
+        function (error) {
+          console.log("FAILED...", error);
+          showContactOverlay();
+        },
+      );
+    } else {
+      showContactOverlay();
+    }
+  });
+}
+
+if (closeOverlay && contactOverlay) {
+  closeOverlay.addEventListener("click", function () {
+    contactOverlay.classList.remove("show");
+  });
+}
+
+if (contactOverlay) {
+  contactOverlay.addEventListener("click", function (event) {
+    if (event.target === contactOverlay) {
+      contactOverlay.classList.remove("show");
+    }
+  });
+}
