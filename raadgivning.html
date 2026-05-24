@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rådgivning</title>
+    <title>Quiz & Læring</title>
     <!-- Google Fonts: Manrope + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -78,7 +78,7 @@
                 <li>Typiske fælder i hverdagen</li>
                 <li>3 nemme måder at spare på</li>
               </ul>
-
+              <!-- data-quiz fortæller JavaScript hvilken quiz-knappen skal åbne -->
               <button class="quiz-toggle" data-quiz="quiz1">
                 Tag mini-quiz
               </button>
@@ -87,7 +87,7 @@
 
           <div class="quiz-box" id="quiz1">
             <h2>Mini-quiz: Småkøb</h2>
-
+            <!-- data-answer bruges af JavaScript til at tjekke det rigtige svar -->
             <div class="quiz-question" data-answer="b">
               <p>1. Hvorfor er småkøb ofte svære at opdage?</p>
               <label
@@ -215,7 +215,7 @@
                 <li>Billige måltider du nemt kan lave</li>
                 <li>Sådan planlægger du smartere indkøb</li>
               </ul>
-
+              <!-- data-quiz fortæller JavaScript hvilken quiz-knappen skal åbne -->
               <button class="quiz-toggle" data-quiz="quiz2">
                 Tag mini-quiz
               </button>
@@ -232,7 +232,7 @@
 
           <div class="quiz-box" id="quiz2">
             <h2>Mini-quiz: Madbudget</h2>
-
+            <!-- data-answer bruges af JavaScript til at tjekke det rigtige svar -->
             <div class="quiz-question" data-answer="b">
               <p>1. Hvorfor kan takeaway blive en budgetfælde?</p>
               <label
@@ -373,7 +373,7 @@
                 <li>Sådan fordeler du dit budget</li>
                 <li>En nem metode til mere overblik</li>
               </ul>
-
+              <!-- data-quiz fortæller JavaScript hvilken quiz-knappen skal åbne -->
               <button class="quiz-toggle" data-quiz="quiz3">
                 Tag mini-quiz
               </button>
@@ -382,7 +382,7 @@
 
           <div class="quiz-box" id="quiz3">
             <h2>Mini-quiz: Del dine penge op</h2>
-
+            <!-- data-answer bruges af JavaScript til at tjekke det rigtige svar -->
             <div class="quiz-question" data-answer="b">
               <p>
                 1. Hvorfor kan det være svært at have alle penge på én konto?
@@ -507,10 +507,16 @@
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-brand">
-          <div class="logo-box footer-logo">
-            <img src="assets/images/logo/logo-saldo.png" alt="Saldo logo" />
+          <div class="footer-brand-top">
+            <div class="logo-box footer-logo">
+              <img src="assets/images/logo/logo-saldo.png" alt="Saldo logo" />
+            </div>
+
+            <div>
+              <h3>Saldo</h3>
+              <p>Fremtid, Frihed, Overskud</p>
+            </div>
           </div>
-          <p>Saldo - Fremtid, Frihed, Overskud</p>
         </div>
 
         <div class="footer-links">

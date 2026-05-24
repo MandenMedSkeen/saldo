@@ -62,6 +62,7 @@
             <div class="budget-row">
               <label for="income" class="label-with-tip">
                 Indkomst / SU
+                <!-- Tooltip forklarer brugeren, hvad feltet betyder -->
                 <span class="tooltip" tabindex="0">
                   ?
                   <span class="tooltip-text">
@@ -70,6 +71,7 @@
                   </span>
                 </span>
               </label>
+              <!-- Budgetberegneren består af inputfelter, som JavaScript bruger til at udregne resultatet -->
               <input
                 type="number"
                 id="income"
@@ -81,6 +83,7 @@
             <div class="budget-row">
               <label for="rent" class="label-with-tip">
                 Husleje
+                <!-- Tooltip forklarer brugeren, hvad feltet betyder -->
                 <span class="tooltip" tabindex="0">
                   ?
                   <span class="tooltip-text">
@@ -89,6 +92,7 @@
                   </span>
                 </span>
               </label>
+              <!-- Budgetberegneren består af inputfelter, som JavaScript bruger til at udregne resultatet -->
               <input type="number" id="rent" placeholder="fx 3500" step="100" />
             </div>
 
@@ -97,18 +101,21 @@
                 Mad
                 <span class="tooltip" tabindex="0">
                   ?
+                  <!-- Tooltip forklarer brugeren, hvad feltet betyder -->
                   <span class="tooltip-text">
                     Mad dækker dagligvarer, kantine, takeaway, kaffe, snacks og
                     andre madudgifter.
                   </span>
                 </span>
               </label>
+              <!-- Budgetberegneren består af inputfelter, som JavaScript bruger til at udregne resultatet -->
               <input type="number" id="food" placeholder="fx 1500" step="100" />
             </div>
 
             <div class="budget-row">
               <label for="transport" class="label-with-tip">
                 Transport
+                <!-- Tooltip forklarer brugeren, hvad feltet betyder -->
                 <span class="tooltip" tabindex="0">
                   ?
                   <span class="tooltip-text">
@@ -117,6 +124,7 @@
                   </span>
                 </span>
               </label>
+              <!-- Budgetberegneren består af inputfelter, som JavaScript bruger til at udregne resultatet -->
               <input
                 type="number"
                 id="transport"
@@ -128,6 +136,7 @@
             <div class="budget-row">
               <label for="subscriptions" class="label-with-tip">
                 Abonnementer
+                <!-- Tooltip forklarer brugeren, hvad feltet betyder -->
                 <span class="tooltip" tabindex="0">
                   ?
                   <span class="tooltip-text">
@@ -136,6 +145,7 @@
                   </span>
                 </span>
               </label>
+              <!-- Budgetberegneren består af inputfelter, som JavaScript bruger til at udregne resultatet -->
               <input
                 type="number"
                 id="subscriptions"
@@ -147,6 +157,7 @@
             <div class="budget-row">
               <label for="other" class="label-with-tip">
                 Diverse
+                <!-- Tooltip forklarer brugeren, hvad feltet betyder -->
                 <span class="tooltip" tabindex="0">
                   ?
                   <span class="tooltip-text">
@@ -155,6 +166,7 @@
                   </span>
                 </span>
               </label>
+              <!-- Budgetberegneren består af inputfelter, som JavaScript bruger til at udregne resultatet -->
               <input type="number" id="other" placeholder="fx 650" step="100" />
             </div>
 
@@ -175,10 +187,16 @@
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-brand">
-          <div class="logo-box footer-logo">
-            <img src="assets/images/logo/logo-saldo.png" alt="Saldo logo" />
+          <div class="footer-brand-top">
+            <div class="logo-box footer-logo">
+              <img src="assets/images/logo/logo-saldo.png" alt="Saldo logo" />
+            </div>
+
+            <div>
+              <h3>Saldo</h3>
+              <p>Fremtid, Frihed, Overskud</p>
+            </div>
           </div>
-          <p>Saldo - Fremtid, Frihed, Overskud</p>
         </div>
 
         <div class="footer-links">

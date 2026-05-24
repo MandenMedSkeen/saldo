@@ -1,3 +1,4 @@
+/* Fjerner browserens standard margin/padding, så vi selv styrer afstande overalt. */
 * {
   margin: 0;
   padding: 0;
@@ -67,6 +68,7 @@ p {
   font-weight: 400;
 }
 
+/* Fælles styling til de små grønne labels, så vi ikke bruger h3 til labels længere. */
 .section-label,
 .lesson-label {
   color: #2ecc71;
@@ -78,7 +80,7 @@ p {
   margin-bottom: 16px;
 }
 
-/* Tekst på mørkegrønne bokse */
+/* Sørger for at almindelig brødtekst bliver hvid på mørkegrønne bokse, men labels forbliver grønne. */
 .hero-text p:not(.section-label),
 .budget-intro p:not(.section-label),
 .lesson-header p:not(.lesson-label),
@@ -106,6 +108,7 @@ p {
 
 /*_______________________________________   Knapper   ____________________________________________*/
 
+/* Samlet styling til alle knapper, så hover- og klik-effekter føles ens på hele siden. */
 button:not(.burger-button),
 #btnSend,
 .advice-cta a,
@@ -176,6 +179,7 @@ button:not(.burger-button):active,
 
 /*_______________________________________   Header / Nav   ____________________________________________*/
 
+/* Headeren bruges på alle sider, så navigationen er ens gennem hele sitet. */
 .site-header {
   background-color: #145a32;
   padding: 0 40px;
@@ -238,6 +242,7 @@ button:not(.burger-button):active,
   gap: 60px;
 }
 
+/* Fjerner ekstra mellemrum over footeren, når SoMe-banneret ligger lige før den. */
 main:has(.so-me-banner) + .site-footer {
   margin-top: 0;
 }
@@ -261,6 +266,7 @@ main:has(.so-me-banner) + .site-footer {
 
 /*_______________________________________   Footer   ____________________________________________*/
 
+/* Fjerner ekstra mellemrum over footeren, når SoMe-banneret ligger lige før den. */
 .site-footer {
   background-color: #145a32;
   color: #f6f6f6;
@@ -276,16 +282,36 @@ main:has(.so-me-banner) + .site-footer {
   gap: 70px;
 }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
 .footer-logo {
-  width: 70px;
-  height: 70px;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.footer-brand h3 {
+  color: #f6f6f6;
+  font-size: 22px;
+  margin-bottom: 6px;
 }
 
 .footer-brand p {
-  max-width: 340px;
-  margin-top: 18px;
-  font-size: 16px;
+  max-width: 300px;
+  margin-top: 0;
+  color: #f6f6f6;
+  font-size: 15px;
   line-height: 1.5;
+  font-weight: 400;
 }
 
 .footer-links,
@@ -366,6 +392,7 @@ main:has(.so-me-banner) + .site-footer {
 
 /*_______________________________________   Forside   ____________________________________________*/
 
+/* Forsidens hero er lavet som to kolonner på desktop: tekst til venstre og billede til højre. */
 .hero-container {
   width: calc(100% - 80px);
   max-width: 1300px;
@@ -491,6 +518,7 @@ main:has(.so-me-banner) + .site-footer {
   padding: 50px 40px;
 }
 
+/* Budgetsektionen er delt op i intro-tekst og selve beregneren. */
 .budget-container {
   max-width: 1300px;
   margin: 0 auto;
@@ -729,6 +757,7 @@ main:has(.so-me-banner) + .site-footer {
   align-items: center;
 }
 
+/* Aspect-ratio holder videoerne i korrekt format, så de ikke bliver mast på forskellige skærmstørrelser. */
 .video-box {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -851,6 +880,7 @@ main:has(.so-me-banner) + .site-footer {
   color: #145a32;
 }
 
+/* Fact-sektionerne bruges til graf + forklarende tekst under lektionerne. */
 .fact-section {
   max-width: 1300px;
   margin: 0 auto 80px;
@@ -951,7 +981,7 @@ main:has(.so-me-banner) + .site-footer {
 }
 
 #about-p {
-  max-width: 760px;
+  max-width: 65ch;
 }
 
 .mv-container {
@@ -995,14 +1025,22 @@ main:has(.so-me-banner) + .site-footer {
 
 .values-container > .section-label,
 .values-container > h2 {
-  max-width: 1300px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #values-h2 {
-  max-width: 1300px;
+  max-width: 1100px;
   color: #f6f6f6;
+}
+
+/* Desktop: values-overskrift flugter med value-kortene */
+.values-container > .section-label,
+.values-container > #values-h2 {
+  max-width: 1204px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .values {
@@ -1112,6 +1150,7 @@ main:has(.so-me-banner) + .site-footer {
   cursor: pointer;
 }
 
+/* Overlayet vises først, når formularen er sendt, og ligger ovenpå hele siden. */
 .contact-overlay {
   position: fixed;
   inset: 0;
@@ -1159,6 +1198,7 @@ main:has(.so-me-banner) + .site-footer {
 
 /*_______________________________________   some.html styling   ____________________________________________*/
 
+/* Styling til den skjulte SoMe-side, som kun tilgås via SoMe-ikonerne. */
 .some-page {
   padding: 50px 40px;
 }
@@ -1272,6 +1312,7 @@ main:has(.so-me-banner) + .site-footer {
 
 /*_______________________________________   Small desktop   ____________________________________________*/
 
+/* Small desktop: justerer layoutet, så elementerne ikke bliver for brede mellem tablet og desktop. */
 @media (min-width: 769px) and (max-width: 1100px) {
   .site-header {
     padding: 0 30px;
@@ -1392,6 +1433,10 @@ main:has(.so-me-banner) + .site-footer {
     font-size: 24px;
   }
 
+  .mi-vi .section-label {
+    font-size: 17px;
+  }
+
   .values-container {
     padding: 50px 30px;
   }
@@ -1407,7 +1452,7 @@ main:has(.so-me-banner) + .site-footer {
 
   .contact-container {
     width: calc(100% - 60px);
-    max-width: 1300px;
+    max-width: 760px;
     margin: 30px auto 40px;
     padding: 40px;
     grid-template-columns: 1fr;
@@ -1566,6 +1611,7 @@ main:has(.so-me-banner) + .site-footer {
 
 /*_______________________________________   Tablet   ____________________________________________*/
 
+/* Tablet: færre kolonner og mere kompakt layout, så siden stadig er læsbar. */
 @media (min-width: 601px) and (max-width: 768px) {
   h1 {
     font-size: 26px;
@@ -1645,12 +1691,29 @@ main:has(.so-me-banner) + .site-footer {
   }
 
   .footer-content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr 1fr;
     gap: 45px;
+  }
+
+  .footer-logo {
+    width: 58px;
+    height: 58px;
   }
 
   .footer-brand {
     grid-column: 1 / -1;
+  }
+
+  .footer-brand-top {
+    align-items: flex-start;
+  }
+
+  .footer-brand h3 {
+    font-size: 20px;
+  }
+
+  .footer-brand p {
+    font-size: 14px;
   }
 
   .hero-container {
@@ -1739,6 +1802,10 @@ main:has(.so-me-banner) + .site-footer {
   }
 
   .mi-vi p {
+    font-size: 17px;
+  }
+
+  .mi-vi .section-label {
     font-size: 17px;
   }
 
@@ -1949,6 +2016,7 @@ main:has(.so-me-banner) + .site-footer {
 
 /*_______________________________________   Mobil   ____________________________________________*/
 
+/* Mobil: elementer stables ovenpå hinanden, så siden fungerer på små skærme. */
 @media (max-width: 600px) {
   h1 {
     font-size: 24px;
@@ -2004,6 +2072,8 @@ main:has(.so-me-banner) + .site-footer {
     display: none;
     width: 100%;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 0;
     margin-top: 14px;
     background-color: #145a32;
@@ -2017,12 +2087,14 @@ main:has(.so-me-banner) + .site-footer {
 
   .nav-links li {
     width: 100%;
+    text-align: center;
   }
 
   .nav-links a {
     display: block;
     padding: 16px 18px;
     font-size: 16px;
+    text-align: center;
     border-bottom: 1px solid rgba(246, 246, 246, 0.15);
   }
 
@@ -2047,6 +2119,10 @@ main:has(.so-me-banner) + .site-footer {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 35px;
+  }
+
+  .footer-brand-top {
+    align-items: flex-start;
   }
 
   .footer-bottom {
@@ -2157,6 +2233,10 @@ main:has(.so-me-banner) + .site-footer {
   }
 
   .mi-vi p {
+    font-size: 16px;
+  }
+
+  .mi-vi .section-label {
     font-size: 16px;
   }
 
