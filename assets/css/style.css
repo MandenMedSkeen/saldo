@@ -22,6 +22,7 @@ img {
   display: block;
 }
 
+.hero-btn,
 button,
 input,
 textarea {
@@ -39,6 +40,7 @@ h4,
 h5,
 h6,
 .nav-logo,
+.hero-btn,
 button,
 input[type="submit"] {
   font-family: "Manrope", sans-serif;
@@ -112,7 +114,7 @@ p {
 button:not(.burger-button),
 #btnSend,
 .advice-cta a,
-#hero-btn,
+.hero-btn,
 .quiz-toggle,
 .quiz-submit,
 #calculateBtn,
@@ -128,7 +130,7 @@ button:not(.burger-button),
 button:not(.burger-button):hover,
 #btnSend:hover,
 .advice-cta a:hover,
-#hero-btn:hover,
+.hero-btn:hover,
 .quiz-toggle:hover,
 .quiz-submit:hover,
 #calculateBtn:hover,
@@ -140,7 +142,7 @@ button:not(.burger-button):hover,
 button:not(.burger-button):active,
 #btnSend:active,
 .advice-cta a:active,
-#hero-btn:active,
+.hero-btn:active,
 .quiz-toggle:active,
 .quiz-submit:active,
 #calculateBtn:active,
@@ -149,7 +151,7 @@ button:not(.burger-button):active,
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-#hero-btn,
+.hero-btn,
 .quiz-toggle,
 #btnSend,
 #closeOverlay {
@@ -157,7 +159,7 @@ button:not(.burger-button):active,
   color: #145a32;
 }
 
-#hero-btn:hover,
+.hero-btn:hover,
 .quiz-toggle:hover,
 #btnSend:hover,
 #closeOverlay:hover {
@@ -428,7 +430,7 @@ main:has(.so-me-banner) + .site-footer {
   margin-bottom: 18px;
 }
 
-#hero-btn {
+.hero-btn {
   margin-top: 30px;
   padding: 16px 24px;
   border: none;
@@ -437,11 +439,11 @@ main:has(.so-me-banner) + .site-footer {
   font-weight: 800;
   width: fit-content;
   cursor: pointer;
+  text-decoration: none;
 }
 
-#hero-btn a {
+.hero-btn a {
   color: #145a32;
-  text-decoration: none;
 }
 
 .hero-img-container {
@@ -501,9 +503,10 @@ main:has(.so-me-banner) + .site-footer {
   padding: 24px;
 }
 
-.card-text h3 {
+.card-text h2 {
   color: #2ecc71;
   margin-bottom: 12px;
+  font-size: 20px;
 }
 
 .card-text p {
@@ -1384,7 +1387,7 @@ main:has(.so-me-banner) + .site-footer {
     flex-direction: column;
   }
 
-  #hero-btn {
+  .hero-btn {
     width: fit-content;
     margin-top: 35px;
     margin-bottom: 0;
@@ -1410,6 +1413,10 @@ main:has(.so-me-banner) + .site-footer {
     width: 280px;
     height: 360px;
     margin: 0;
+  }
+
+  .card-text h2 {
+    font-size: 24px;
   }
 
   .about-container {
@@ -1745,7 +1752,7 @@ main:has(.so-me-banner) + .site-footer {
     font-size: 17px;
   }
 
-  #hero-btn {
+  .hero-btn {
     margin-left: 0;
     margin-right: auto;
   }
@@ -1773,6 +1780,10 @@ main:has(.so-me-banner) + .site-footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 0 30px;
     gap: 22px;
+  }
+
+  .card-text h2 {
+    font-size: 20px;
   }
 
   .about-container {
@@ -2156,7 +2167,7 @@ main:has(.so-me-banner) + .site-footer {
     max-width: 100%;
   }
 
-  #hero-btn {
+  .hero-btn {
     width: fit-content;
     margin-top: 30px;
     margin-bottom: 0;
@@ -2203,6 +2214,10 @@ main:has(.so-me-banner) + .site-footer {
 
   .card-text p {
     font-size: 16px;
+  }
+
+  .card-text h2 {
+    font-size: 18px;
   }
 
   .about-container {
