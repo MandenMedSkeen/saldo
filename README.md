@@ -2,33 +2,33 @@ GUIDE:
 
 
 
-1\. Hvad skal dine gruppemedlemmer gøre?
+1\. Hvad skal vi som gruppemedlemmer gøre?
 
-Når de har accepteret invitationen, skal de hente projektet ned.
+Når du har accepteret invitationen, skal du hente projektet ned.
 
-De kan gå ind på repoet og trykke:
+Du kan gå ind på repoet og trykke:
 
 **Code > HTTPS > Copy link**
 
-Derefter åbner de VS Code og terminalen og skriver:
+Derefter åbner du VS Code og terminalen og skriver:
 
 **git clone https://github.com/MandenMedSkeen/saldo.git**
 
-Så får de hele mappen ned på deres computer.
+Så får du hele mappen ned på din computer.
 
 
 
-2\. Jeres daglige GitHub-workflow
+2\. Vores daglige GitHub-workflow
 
 Hver gang en person skal arbejde på projektet:
 
-Før de begynder, skriv i terminalen:
+Før du begynder, skriv i terminalen:
 
 **git pull**
 
 Det henter de nyeste ændringer fra de andre.
 
-Når de har lavet ændringer:
+Når du har lavet ændringer:
 
 **git add .**
 
@@ -48,7 +48,7 @@ Eksempel:
 
 3\. Filnavne-regler
 
-Jeg ville holde mig til:
+Vi skal holde os til:
 
 **små-bogstaver**
 
@@ -80,5 +80,5 @@ Ikke så godt:
 
 4\. Videoer
 
-**Med videoer afhænger det af størrelsen. Hvis jeres videoer er store, ville jeg hellere uploade dem et andet sted og embedde dem på siden.**
+**Med videoer afhænger det af størrelsen. Hvis vores videoer er store, ville jeg hellere uploade dem et andet sted og embedde dem på siden.**
 
