@@ -82,8 +82,3 @@ Ikke så godt:
 
 **Med videoer afhænger det af størrelsen. Hvis jeres videoer er store, ville jeg hellere uploade dem et andet sted og embedde dem på siden.**
 
-
-
-HYG JER FOR FAAN DA :D
-https://www.youtube.com/watch?v=EbyFcsb2uQY
-
